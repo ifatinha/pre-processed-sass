@@ -1,0 +1,38 @@
+/*Mixins Globals*/
+@import "../variables/colors.scss";
+
+@mixin background-section-color ($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+
+@mixin display-flex-properties($display, $flex-direction, $justify-content, $align-items) {
+    display        : $display;
+    flex-direction : $flex-direction;
+    justify-content: $justify-content;
+    align-items    : $align-items;
+}
+
+@mixin font-style-h2 ($margin-bottom) {
+    font-size     : 1.5rem;
+    font-weight   : 700;
+    margin-bottom : $margin-bottom;
+    margin-top    : 3%;
+    text-transform: uppercase;
+}
+
+@mixin card-planos-textos($color) {
+    color      : $color;
+    font-size  : 2.4rem;
+    font-weight: 500;
+    margin     : 2% 0;
+    text-align : center;
+}
+
+@mixin btn-planos($border-color, $color) {
+    border    : 1px solid $border-color;
+    color     : $color;
+    font-size : 1.3rem;
+    padding   : 3%;
+    transition: 0.4s;
+    width     : 80%;
+}
