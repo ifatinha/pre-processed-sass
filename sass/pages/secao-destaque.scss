@@ -1,0 +1,34 @@
+.secao-destaque {
+
+    a {
+        @extend .btn-basic;
+        border       : 1px solid $purple;
+        margin-bottom: 2%;
+
+        &:hover {
+            background-color: $purple;
+            color           : $white;
+            transition      : 0.7s;
+        }
+    }
+}
+
+.content-destaque {
+    @include display-flex-properties(flex, row, center, center);
+    gap: 5%;
+}
+
+.card-destaque {
+    margin-bottom: 5%;
+    width        : 30%;
+
+    p {
+        font-size  : 1.3rem;
+        font-weight: bolder;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor    : pointer;
+    }
+}

@@ -1,0 +1,79 @@
+.secao-planos {
+    @include display-flex-properties(flex, column, space-around, center);
+}
+
+.content-planos {
+    @include display-flex-properties(flex, row, center, center);
+    gap          : 1%;
+    margin-bottom: 5%;
+    width        : 100%;
+}
+
+.card-planos {
+    @include display-flex-properties(flex, column, center, center);
+
+    background-color: $white;
+    border-radius   : 6px;
+    padding         : 1% 0 3% 0;
+    text-align      : center;
+    width           : 18%;
+
+    hr {
+        border          : none;
+        background-color: $gray;
+        content         : "";
+        height          : 1px;
+        width           : 80%;
+    }
+
+    .start {
+        @include card-planos-textos($yellow);
+    }
+
+    .ultra {
+        @include card-planos-textos($purple);
+    }
+
+    .mega {
+        @include card-planos-textos($black);
+    }
+
+    ul {
+        font-size: 1rem;
+        padding  : 5% 12%;
+    }
+
+    li {
+        margin-bottom: 5%;
+    }
+}
+
+.btn-start {
+    @extend .btn-basic;
+    @include btn-planos($yellow, $yellow);
+
+    &:hover {
+        background-color: $yellow;
+        color           : $white;
+    }
+}
+
+.btn-ultra {
+    @extend .btn-basic;
+    @include btn-planos($purple, $purple);
+
+    &:hover {
+        background-color: $purple;
+        color           : $white;
+    }
+}
+
+.btn-mega {
+    @extend .btn-basic;
+    @include btn-planos($black, $black);
+
+    &:hover {
+        background-color: $black;
+        color           : $white;
+    }
+}

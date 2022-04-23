@@ -1,0 +1,28 @@
+main {
+    @include display-flex-properties(flex, row, space-around, center);
+    height: 30vh;
+
+    .card {
+        @include display-flex-properties(flex, column, flex-start, flex-start);
+        padding  : 1%;
+        max-width: 30%;
+
+        p {
+            letter-spacing: 0.1rem;
+            line-height   : 1.4rem;
+        }
+    }
+
+    .card-header {
+        display       : flex;
+        flex-direction: row;
+        margin-bottom : 3%;
+
+        p {
+            font-size     : 1.4rem;
+            font-weight   : 900;
+            text-transform: uppercase;
+            margin        : 8% 0 0 8%;
+        }
+    }
+}

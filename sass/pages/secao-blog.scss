@@ -1,0 +1,21 @@
+.desc-blog {
+    margin-bottom: 3%;
+    padding      : 1% 0;
+    width        : 52%;
+
+    .blog-desc-title {
+        font-size    : 1.3rem;
+        font-weight  : bold;
+        margin-bottom: 2%;
+    }
+
+    .blog-desc-text {
+        font-size: 0.9rem;
+
+        span {
+            color          : $purple;
+            font-weight    : 900;
+            text-decoration: underline;
+        }
+    }
+}

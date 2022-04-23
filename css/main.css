@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 /*Color pallete*/
 /*Mixins Globals*/
 /*Color pallete*/
-/*Global*/
 html {
   scroll-behavior: smooth;
 }
@@ -12,13 +10,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.btn-basic,
-.secao-contato form a,
-.secao-destaque a,
-.secao-planos .btn-mega,
-.secao-planos .btn-ultra,
-.secao-planos .btn-start,
-.content-header a {
+.btn-basic, .secao-contato form a, .secao-destaque a, .btn-mega, .btn-ultra, .btn-start, .content-header a {
   border-radius: 5px;
   cursor: pointer;
   padding: 1%;
@@ -54,7 +46,6 @@ header {
   color: #ffffff;
   height: 70vh;
 }
-
 header a {
   color: #ffffff;
 }
@@ -66,7 +57,6 @@ header a {
   align-items: center;
   padding: 1% 0;
 }
-
 .top-header .logo {
   display: flex;
   flex-direction: row;
@@ -74,16 +64,13 @@ header a {
   align-items: center;
   gap: 5%;
 }
-
 .top-header .logo img {
   width: 42px;
   height: 42px;
 }
-
 .top-header .logo a {
   font-size: 2rem;
 }
-
 .top-header nav {
   display: flex;
   flex-direction: row;
@@ -93,7 +80,6 @@ header a {
   gap: 4%;
   width: 35%;
 }
-
 .top-header nav a:hover {
   text-decoration: underline;
 }
@@ -105,7 +91,6 @@ header a {
   align-items: center;
   padding-top: 5%;
 }
-
 .content-header h1 {
   font-size: 5rem;
   font-weight: 900;
@@ -113,19 +98,16 @@ header a {
   margin-bottom: 3%;
   text-transform: uppercase;
 }
-
 .content-header p {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   text-align: center;
   margin-bottom: 3%;
 }
-
 .content-header a {
   border: 1px solid #6e2594;
   width: 20%;
 }
-
 .content-header a:hover {
   background-color: #6e2594;
   color: #ffffff;
@@ -139,7 +121,6 @@ main {
   align-items: center;
   height: 30vh;
 }
-
 main .card {
   display: flex;
   flex-direction: column;
@@ -148,18 +129,15 @@ main .card {
   padding: 1%;
   max-width: 30%;
 }
-
 main .card p {
   letter-spacing: 0.1rem;
   line-height: 1.4rem;
 }
-
 main .card-header {
   display: flex;
   flex-direction: row;
   margin-bottom: 3%;
 }
-
 main .card-header p {
   font-size: 1.4rem;
   font-weight: 900;
@@ -176,17 +154,15 @@ main .card-header p {
   padding: 3%;
 }
 
-.secao-sobre .content-sobre {
+.content-sobre {
   width: 40%;
   padding: 2% 4%;
 }
-
-.secao-sobre .content-sobre p {
+.content-sobre p {
   margin-bottom: 5%;
   line-height: 1.5rem;
 }
-
-.secao-sobre .content-sobre .hr {
+.content-sobre .hr {
   border: none;
   background-color: #6e2594;
   content: "";
@@ -194,18 +170,17 @@ main .card-header p {
   margin: 3% 0;
 }
 
-.secao-sobre .icons-parceiros {
+.icons-parceiros {
   display: flex;
   gap: 10%;
   margin-bottom: 10%;
 }
-
-.secao-sobre .icons-parceiros img {
+.icons-parceiros img {
   width: 48px;
   height: 48px;
 }
 
-.secao-sobre .image-sobre {
+.image-sobre {
   width: 60%;
 }
 
@@ -216,7 +191,7 @@ main .card-header p {
   align-items: center;
 }
 
-.secao-planos .content-planos {
+.content-planos {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -226,7 +201,7 @@ main .card-header p {
   width: 100%;
 }
 
-.secao-planos .card-planos {
+.card-planos {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,49 +212,43 @@ main .card-header p {
   text-align: center;
   width: 18%;
 }
-
-.secao-planos .card-planos hr {
+.card-planos hr {
   border: none;
   background-color: #e2e2e2;
   content: "";
   height: 1px;
   width: 80%;
 }
-
-.secao-planos .card-planos .start {
+.card-planos .start {
   color: #ecd444;
   font-size: 2.4rem;
   font-weight: 500;
   margin: 2% 0;
   text-align: center;
 }
-
-.secao-planos .card-planos .ultra {
+.card-planos .ultra {
   color: #6e2594;
   font-size: 2.4rem;
   font-weight: 500;
   margin: 2% 0;
   text-align: center;
 }
-
-.secao-planos .card-planos .mega {
+.card-planos .mega {
   color: #000000;
   font-size: 2.4rem;
   font-weight: 500;
   margin: 2% 0;
   text-align: center;
 }
-
-.secao-planos .card-planos ul {
+.card-planos ul {
   font-size: 1rem;
   padding: 5% 12%;
 }
-
-.secao-planos .card-planos li {
+.card-planos li {
   margin-bottom: 5%;
 }
 
-.secao-planos .btn-start {
+.btn-start {
   border: 1px solid #ecd444;
   color: #ecd444;
   font-size: 1.3rem;
@@ -287,13 +256,12 @@ main .card-header p {
   transition: 0.4s;
   width: 80%;
 }
-
-.secao-planos .btn-start:hover {
+.btn-start:hover {
   background-color: #ecd444;
   color: #ffffff;
 }
 
-.secao-planos .btn-ultra {
+.btn-ultra {
   border: 1px solid #6e2594;
   color: #6e2594;
   font-size: 1.3rem;
@@ -301,13 +269,12 @@ main .card-header p {
   transition: 0.4s;
   width: 80%;
 }
-
-.secao-planos .btn-ultra:hover {
+.btn-ultra:hover {
   background-color: #6e2594;
   color: #ffffff;
 }
 
-.secao-planos .btn-mega {
+.btn-mega {
   border: 1px solid #000000;
   color: #000000;
   font-size: 1.3rem;
@@ -315,8 +282,7 @@ main .card-header p {
   transition: 0.4s;
   width: 80%;
 }
-
-.secao-planos .btn-mega:hover {
+.btn-mega:hover {
   background-color: #000000;
   color: #ffffff;
 }
@@ -326,17 +292,14 @@ main .card-header p {
   padding: 1% 0;
   width: 52%;
 }
-
 .desc-blog .blog-desc-title {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 2%;
 }
-
 .desc-blog .blog-desc-text {
   font-size: 0.9rem;
 }
-
 .desc-blog .blog-desc-text span {
   color: #6e2594;
   font-weight: 900;
@@ -347,14 +310,13 @@ main .card-header p {
   border: 1px solid #6e2594;
   margin-bottom: 2%;
 }
-
 .secao-destaque a:hover {
   background-color: #6e2594;
   color: #ffffff;
   transition: 0.7s;
 }
 
-.secao-destaque .content-destaque {
+.content-destaque {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -362,17 +324,15 @@ main .card-header p {
   gap: 5%;
 }
 
-.secao-destaque .card-destaque {
+.card-destaque {
   margin-bottom: 5%;
   width: 30%;
 }
-
-.secao-destaque .card-destaque p {
+.card-destaque p {
   font-size: 1.3rem;
   font-weight: bolder;
 }
-
-.secao-destaque .card-destaque:hover {
+.card-destaque:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
 }
@@ -380,7 +340,6 @@ main .card-header p {
 .secao-contato p:last-of-type {
   margin-bottom: 1%;
 }
-
 .secao-contato form {
   display: flex;
   flex-direction: column;
@@ -389,43 +348,38 @@ main .card-header p {
   width: 40%;
   margin-bottom: 5%;
 }
-
 .secao-contato form a {
   border: 1px solid #6e2594;
   color: #000000;
   padding: 2%;
   width: 80%;
 }
-
 .secao-contato form a:hover {
   background-color: #6e2594;
   color: #ffffff;
   transition: 0.8s;
 }
 
-.secao-contato .campo-form {
+.campo-form {
   display: flex;
   flex-direction: column;
   width: 80%;
   margin-bottom: 2%;
 }
-
-.secao-contato .campo-form label {
+.campo-form label {
   margin-bottom: 1%;
 }
-
-.secao-contato .campo-form input {
+.campo-form input {
   border: none;
   border-bottom: 1px solid #6e2594;
   outline: none;
   padding: 2%;
 }
-
-.secao-contato .campo-form select {
+.campo-form select {
   padding: 2%;
 }
 
-.secao-contato .campo-form-checkbox {
+.campo-form-checkbox {
   width: 80%;
   margin-bottom: 3%;
 }
@@ -448,7 +402,6 @@ main .card-header p {
   padding: 1%;
   width: 40%;
 }
-
 .card-institucional video {
   width: 100%;
 }
@@ -467,7 +420,6 @@ main .card-header p {
 .telefone {
   font-size: 1.2rem;
 }
-
 .telefone a {
   text-decoration: underline;
 }
@@ -481,7 +433,7 @@ footer {
   color: #ffffff;
 }
 
-footer .content-footer {
+.content-footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -490,11 +442,11 @@ footer .content-footer {
   width: 80%;
 }
 
-footer .logo-apeperia h2 {
+.logo-apeperia h2 {
   font-size: 2rem;
 }
 
-footer .redes-sociais {
+.redes-sociais {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -502,17 +454,15 @@ footer .redes-sociais {
   gap: 5%;
   width: 20%;
 }
-
-footer .redes-sociais img {
+.redes-sociais img {
   width: 42px;
   height: 42px;
 }
 
-footer .links-rodape {
+.links-rodape {
   width: 40%;
 }
-
-footer .links-rodape ul {
+.links-rodape ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -520,21 +470,18 @@ footer .links-rodape ul {
   gap: 2%;
   list-style: none;
 }
-
-footer .links-rodape a {
+.links-rodape a {
   color: #ffffff;
 }
-
-footer .links-rodape a:hover {
+.links-rodape a:hover {
   text-decoration: underline;
 }
 
-footer .copyright {
+.copyright {
   margin-bottom: 3%;
   width: 60%;
 }
-
-footer .copyright hr {
+.copyright hr {
   background-color: #e2e2e2;
   border: none;
   content: "";

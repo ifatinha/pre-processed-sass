@@ -1,0 +1,38 @@
+.secao-sobre {
+    @include display-flex-properties(flex, row, space-around, flex-start);
+    height : 100vh;
+    padding: 3%;
+}
+
+.content-sobre {
+    width  : 40%;
+    padding: 2% 4%;
+
+    p {
+        margin-bottom: 5%;
+        line-height  : 1.5rem;
+    }
+
+    .hr {
+        border          : none;
+        background-color: $purple;
+        content         : "";
+        height          : 1px;
+        margin          : 3% 0;
+    }
+}
+
+.icons-parceiros {
+    display      : flex;
+    gap          : 10%;
+    margin-bottom: 10%;
+
+    img {
+        width : 48px;
+        height: 48px;
+    }
+}
+
+.image-sobre {
+    width: 60%;
+}

@@ -1,0 +1,30 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-basic {
+    border-radius: 5px;
+    cursor       : pointer;
+    padding      : 1%;
+    text-align   : center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    @include font-style-h2(2%);
+}
+
+.secao-com-background {
+    @include background-section-color($gray, 0.3);
+}
+
+.display {
+    @include display-flex-properties(flex, column, center, center);
+}
