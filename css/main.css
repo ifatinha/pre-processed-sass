@@ -1,11 +1,7 @@
-@charset "UTF-8";
-/*Fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-/*Import variáveis*/
 /*Color pallete*/
 /*Mixins Globals*/
 /*Color pallete*/
-/*Import seções*/
 html {
   scroll-behavior: smooth;
 }
@@ -349,7 +345,7 @@ main .card-header p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 50%;
   margin-bottom: 5%;
 }
 .secao-contato form a {
