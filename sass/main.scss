@@ -22,6 +22,18 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    @include font-style-h2(2%);
+}
+
+.secao-com-background {
+    @include background-section-color($gray, 0.3);
+}
+
+.display {
+    @include display-flex-properties(flex, column, center, center);
+}
+
 header {
     background     : linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url("../images/background.jpg") center;
     background-size: cover;
@@ -98,7 +110,6 @@ header {
 }
 
 main {
-    @include background-section-color($gray, 0.3);
     @include display-flex-properties(flex, row, space-around, center);
     height: 30vh;
 
@@ -136,10 +147,6 @@ main {
         width  : 40%;
         padding: 2% 4%;
 
-        h2 {
-            @include font-style-h2(5%);
-        }
-
         p {
             margin-bottom: 5%;
             line-height  : 1.5rem;
@@ -171,12 +178,7 @@ main {
 }
 
 .secao-planos {
-    @include background-section-color($gray, 0.3);
     @include display-flex-properties(flex, column, space-around, center);
-
-    h2 {
-        @include font-style-h2(2%);
-    }
 
     .content-planos {
         @include display-flex-properties(flex, row, center, center);
@@ -217,10 +219,10 @@ main {
         ul {
             font-size: 1rem;
             padding  : 5% 12%;
+        }
 
-            li {
-                margin-bottom: 5%;
-            }
+        li {
+            margin-bottom: 5%;
         }
     }
 
@@ -255,66 +257,29 @@ main {
     }
 }
 
-.secao-blog {
-    @include display-flex-properties(flex, column, center, center);
+.desc-blog {
+    margin-bottom: 3%;
+    padding      : 1% 0;
+    width        : 52%;
 
-    h2 {
-        @include font-style-h2(2%);
+    .blog-desc-title {
+        font-size    : 1.3rem;
+        font-weight  : bold;
+        margin-bottom: 2%;
     }
 
-    .desc-blog {
-        margin-bottom: 3%;
-        padding      : 1% 0;
-        width        : 52%;
+    .blog-desc-text {
+        font-size: 0.9rem;
 
-        .blog-desc-title {
-            font-size    : 1.3rem;
-            font-weight  : bold;
-            margin-bottom: 2%;
-        }
-
-        .blog-desc-text {
-            font-size: 0.9rem;
-
-            span {
-                color          : $purple;
-                font-weight    : 900;
-                text-decoration: underline;
-            }
+        span {
+            color          : $purple;
+            font-weight    : 900;
+            text-decoration: underline;
         }
     }
 }
 
 .secao-destaque {
-    @include background-section-color($gray, 0.3);
-    @include display-flex-properties(flex, column, center, center);
-
-    h2 {
-        @include font-style-h2(3%);
-    }
-
-    .content-destaque {
-        @include display-flex-properties(flex, row, center, center);
-        gap: 5%;
-    }
-
-    .card-destaque {
-        width: 30%;
-
-        p {
-            font-size  : 1.3rem;
-            font-weight: bolder;
-        }
-
-        margin-bottom: 5%;
-
-        &:hover {
-            background-color: $white;
-            box-shadow      : 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border          : 8px solid $white;
-            cursor          : pointer;
-        }
-    }
 
     a {
         @extend .btn-basic;
@@ -327,15 +292,29 @@ main {
             transition      : 0.7s;
         }
     }
+
+    .content-destaque {
+        @include display-flex-properties(flex, row, center, center);
+        gap: 5%;
+    }
+
+    .card-destaque {
+        margin-bottom: 5%;
+        width        : 30%;
+
+        p {
+            font-size  : 1.3rem;
+            font-weight: bolder;
+        }
+
+        &:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor    : pointer;
+        }
+    }
 }
 
 .secao-contato {
-
-    @include display-flex-properties(flex, column, center, center);
-
-    h2 {
-        @include font-style-h2(1%);
-    }
 
     p:last-of-type {
         margin-bottom: 1%;
@@ -389,50 +368,40 @@ main {
     }
 }
 
-.secao-institucional {
-    @include display-flex-properties(flex, column, center, center);
-    @include background-section-color($gray, 0.3);
+.content-institucional {
+    @include display-flex-properties(flex, row, space-around, center);
+    gap          : 1%;
+    margin-bottom: 5%;
+    width        : 80%;
+}
 
-    h2 {
-        @include font-style-h2(2%);
+.card-institucional {
+    @include display-flex-properties(flex, column, flex-start, flex-start);
+    padding: 1%;
+    width  : 40%;
+
+    video {
+        width: 100%;
     }
+}
 
-    .content-institucional {
-        @include display-flex-properties(flex, row, space-around, center);
-        gap          : 1%;
-        margin-bottom: 5%;
-        width        : 80%;
+.titulo-institucional {
+    font-size: 0.9rem;
+}
+
+.endereco {
+    font-size  : 1.4rem;
+    font-style : italic;
+    line-height: 2rem;
+    margin     : 5% 0;
+}
+
+.telefone {
+    font-size: 1.2rem;
+
+    a {
+        text-decoration: underline;
     }
-
-    .card-institucional {
-        @include display-flex-properties(flex, column, flex-start, flex-start);
-        padding: 1%;
-        width  : 40%;
-
-        video {
-            width: 100%;
-        }
-    }
-
-    .titulo-institucional {
-        font-size: 0.9rem;
-    }
-
-    .endereco {
-        font-size  : 1.4rem;
-        font-style : italic;
-        line-height: 2rem;
-        margin     : 5% 0;
-    }
-
-    .telefone {
-        font-size: 1.2rem;
-
-        a {
-            text-decoration: underline;
-        }
-    }
-
 }
 
 footer {
