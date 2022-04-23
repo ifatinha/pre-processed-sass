@@ -1,13 +1,19 @@
+/*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import "./variables/colors.scss";
-@import "./functions/mixins.scss";
-@import "./pages/global.scss";
-@import "./pages/header.scss";
-@import "./pages/main-principal.scss";
-@import "./pages/secao-sobre.scss";
-@import "./pages/secao-planos.scss";
-@import "./pages/secao-blog.scss";
-@import "./pages/secao-destaque.scss";
-@import "./pages/secao-contato.scss";
-@import "./pages/secao-institucional.scss";
-@import "./pages/footer.scss";
+
+/*Import variáveis*/
+@import "./variables/colors";
+@import "./functions/mixins";
+
+/*Import seções*/
+@import "./laytout/global";
+@import "./laytout/header";
+
+@import "./laytout/main-principal";
+@import "./laytout/secao-sobre";
+@import "./laytout/secao-planos";
+@import "./laytout/secao-blog";
+@import "./laytout/secao-destaque";
+@import "./laytout/secao-contato";
+@import "./laytout/secao-institucional";
+@import "./laytout/footer";
