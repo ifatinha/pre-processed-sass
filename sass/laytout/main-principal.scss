@@ -1,28 +1,49 @@
 main {
-    @include display-flex-properties(flex, row, space-around, center);
+    @extend %display-flex-space-around;
     height: 30vh;
 
     .card {
-        @include display-flex-properties(flex, column, flex-start, flex-start);
-        padding  : 1%;
-        max-width: 30%;
+        @include display-flex-properties(flex, column, center, flex-start);
+        padding: 1%;
+        width: 30%;
 
         p {
             letter-spacing: 0.1rem;
-            line-height   : 1.4rem;
+            line-height: 1.4rem;
         }
     }
 
     .card-header {
-        display       : flex;
+        display: flex;
         flex-direction: row;
-        margin-bottom : 3%;
+        margin-bottom: 3%;
 
         p {
-            font-size     : 1.4rem;
-            font-weight   : 900;
+            font-size: 1.4rem;
+            font-weight: 900;
             text-transform: uppercase;
-            margin        : 8% 0 0 8%;
+            margin: 8% 0 0 8%;
+        }
+    }
+
+    @media screen and #{$mq-mobile} {
+        flex-direction: column;
+        height: auto;
+        padding: 2% 0;
+
+        .card {
+            width: 90%;
+        }
+
+        .card-header {
+            img {
+                height: 38px;
+                width: 38px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }

@@ -1,53 +1,64 @@
 .secao-contato {
-
     p:last-of-type {
         margin-bottom: 1%;
     }
 
     form {
         @include display-flex-properties(flex, column, center, center);
-        width        : 50%;
+        width: 60%;
         margin-bottom: 5%;
 
         a {
             @extend .btn-basic;
-            border : 1px solid $purple;
-            color  : $black;
+            border: 1px solid $purple;
+            color: $black;
             padding: 2%;
-            width  : 80%;
+            width: 80%;
 
             &:hover {
                 background-color: $purple;
-                color           : $white;
-                transition      : 0.8s;
+                color: $white;
+                transition: 0.8s;
             }
+        }
+    }
+
+    @media screen and #{$mq-mobile} {
+        form {
+            width: 100%;
+            margin: 2% 0;
         }
     }
 }
 
 .campo-form {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    width         : 80%;
-    margin-bottom : 2%;
+    width: 80%;
+    margin-bottom: 2%;
 
     label {
         margin-bottom: 1%;
     }
 
     input {
-        border       : none;
+        border: none;
         border-bottom: 1px solid $purple;
-        outline      : none;
-        padding      : 2%;
+        outline: none;
+        padding: 2%;
     }
 
     select {
         padding: 2%;
     }
+
+    textarea {
+        padding: 1%;
+        resize: none;
+    }
 }
 
 .campo-form-checkbox {
-    width        : 80%;
+    width: 80%;
     margin-bottom: 3%;
 }

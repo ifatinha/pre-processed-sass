@@ -8,9 +8,9 @@ body {
 
 .btn-basic {
     border-radius: 5px;
-    cursor       : pointer;
-    padding      : 1%;
-    text-align   : center;
+    cursor: pointer;
+    padding: 1%;
+    text-align: center;
 }
 
 a {
@@ -27,4 +27,19 @@ h2 {
 
 .display {
     @include display-flex-properties(flex, column, center, center);
+}
+
+//Placeholders
+%display-flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+%display-flex-space-around {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

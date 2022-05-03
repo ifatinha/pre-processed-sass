@@ -5,25 +5,41 @@ footer {
 }
 
 .content-footer {
-    @include display-flex-properties(flex, row, center, center);
+    @extend %display-flex-row-center;
     margin: 2% 0;
-    width : 80%;
+    width: 80%;
+
+    @media screen and #{$mq-mobile} {
+        flex-direction: column;
+    }
 }
 
 .logo-apeperia {
     h2 {
         font-size: 2rem;
     }
+
+    @media screen and #{$mq-mobile} {
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .redes-sociais {
-    @include display-flex-properties(flex, row, center, center);
-    gap  : 5%;
+    @extend %display-flex-row-center;
+    gap: 5%;
     width: 20%;
 
     img {
-        width : 42px;
+        width: 42px;
         height: 42px;
+    }
+
+    @media screen and #{$mq-mobile} {
+        img {
+            display: none;
+        }
     }
 }
 
@@ -31,8 +47,8 @@ footer {
     width: 40%;
 
     ul {
-        @include display-flex-properties(flex, row, center, center);
-        gap       : 2%;
+        @extend %display-flex-row-center;
+        gap: 2%;
         list-style: none;
     }
 
@@ -44,17 +60,25 @@ footer {
         }
     }
 
+    @media screen and #{$mq-mobile} {
+        display: none;
+    }
 }
 
 .copyright {
     margin-bottom: 3%;
-    width        : 60%;
+    width: 60%;
 
     hr {
         background-color: $gray;
-        border          : none;
-        content         : "";
-        height          : 1px;
-        margin-bottom   : 1%;
+        border: none;
+        content: "";
+        height: 1px;
+        margin-bottom: 1%;
     }
+
+    @media screen and #{$mq-mobile} {
+        text-align: center;
+    }
+
 }

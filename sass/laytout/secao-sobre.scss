@@ -1,35 +1,58 @@
 .secao-sobre {
     @include display-flex-properties(flex, row, space-around, flex-start);
-    height : 100vh;
+    height: 100vh;
     padding: 3%;
+
+    @media screen and #{$mq-mobile} {
+        flex-direction: column-reverse;
+        height: auto;
+
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .content-sobre {
-    width  : 40%;
+    width: 40%;
     padding: 2% 4%;
 
     p {
         margin-bottom: 5%;
-        line-height  : 1.5rem;
+        line-height: 1.5rem;
     }
 
     .hr {
-        border          : none;
+        border: none;
         background-color: $purple;
-        content         : "";
-        height          : 1px;
-        margin          : 3% 0;
+        content: "";
+        height: 1px;
+        margin: 3% 0;
+    }
+
+    @media screen and #{$mq-mobile} {
+        width: 100%;
     }
 }
 
 .icons-parceiros {
-    display      : flex;
-    gap          : 10%;
+    display: flex;
+    gap: 10%;
     margin-bottom: 10%;
 
     img {
-        width : 48px;
+        width: 48px;
         height: 48px;
+    }
+
+    @media screen and #{$mq-mobile} {
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 32px;
+            width: 32px;
+        }
     }
 }
 

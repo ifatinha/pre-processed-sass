@@ -1,11 +1,11 @@
 .desc-blog {
     margin-bottom: 3%;
-    padding      : 1% 0;
-    width        : 52%;
+    padding: 1% 0;
+    width: 52%;
 
     .blog-desc-title {
-        font-size    : 1.3rem;
-        font-weight  : bold;
+        font-size: 1.3rem;
+        font-weight: bold;
         margin-bottom: 2%;
     }
 
@@ -13,9 +13,21 @@
         font-size: 0.9rem;
 
         span {
-            color          : $purple;
-            font-weight    : 900;
+            color: $purple;
+            font-weight: 900;
             text-decoration: underline;
         }
+    }
+
+    @media screen and #{$mq-mobile} {
+        margin: 5% 0 15%;
+        padding: 2%;
+        width: 90%;
+    }
+}
+
+@media screen and #{$mq-mobile} {
+    img {
+        width: 100%;
     }
 }

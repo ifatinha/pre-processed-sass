@@ -1,35 +1,49 @@
 .content-institucional {
     @include display-flex-properties(flex, row, space-around, center);
-    gap          : 1%;
+    gap: 1%;
     margin-bottom: 5%;
-    width        : 80%;
+    width: 80%;
+
+    .titulo-institucional {
+        font-size: 0.9rem;
+    }
+
+    .endereco {
+        font-size: 1.4rem;
+        font-style: italic;
+        line-height: 2rem;
+        margin: 5% 0;
+    }
+
+    .telefone {
+        font-size: 1.2rem;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    @media screen and #{$mq-mobile} {
+        flex-direction: column;
+
+        .endereco,
+        .telefone {
+            font-size: 1rem;
+        }
+    }
 }
 
 .card-institucional {
     @include display-flex-properties(flex, column, flex-start, flex-start);
     padding: 1%;
-    width  : 40%;
+    width: 40%;
 
     video {
         width: 100%;
     }
-}
 
-.titulo-institucional {
-    font-size: 0.9rem;
-}
-
-.endereco {
-    font-size  : 1.4rem;
-    font-style : italic;
-    line-height: 2rem;
-    margin     : 5% 0;
-}
-
-.telefone {
-    font-size: 1.2rem;
-
-    a {
-        text-decoration: underline;
+    @media screen and #{$mq-mobile} {
+        align-items: center;
+        width: 100%;
     }
 }

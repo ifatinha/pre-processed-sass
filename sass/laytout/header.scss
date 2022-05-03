@@ -1,24 +1,28 @@
 header {
-    background     : linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url("../images/background.jpg") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url("../images/background.jpg") center;
     background-size: cover;
-    color          : $white;
-    height         : 70vh;
+    color: $white;
+    height: 70vh;
 
     a {
         color: $white;
     }
+
+    @media screen and #{$mq-mobile} {
+        height: 100vh;
+    }
 }
 
 .top-header {
-    @include display-flex-properties(flex, row, space-around, center);
+    @extend %display-flex-space-around;
     padding: 1% 0;
 
     .logo {
-        @include display-flex-properties(flex, row, center, center);
+        @extend %display-flex-row-center;
         gap: 5%;
 
         img {
-            width : 42px;
+            width: 42px;
             height: 42px;
         }
 
@@ -28,10 +32,10 @@ header {
     }
 
     nav {
-        @include display-flex-properties(flex, row, space-around, center);
+        @extend %display-flex-space-around;
         flex-wrap: wrap;
-        gap      : 4%;
-        width    : 35%;
+        gap: 4%;
+        width: 35%;
 
         a {
             &:hover {
@@ -39,36 +43,69 @@ header {
             }
         }
     }
+
+    @media screen and #{$mq-mobile} {
+        .logo img {
+            height: 32px;
+            width: 32px;
+        }
+
+        nav {
+            display: none;
+        }
+    }
 }
 
 .content-header {
-    @include display-flex-properties(flex, column, center, center);
+    @include display-flex-properties(flex,
+        column,
+        center,
+        center);
     padding-top: 5%;
 
     h1 {
-        font-size     : 5rem;
-        font-weight   : 900;
+        font-size: 5rem;
+        font-weight: 900;
         letter-spacing: 0.2rem;
-        margin-bottom : 3%;
+        margin-bottom: 3%;
         text-transform: uppercase;
     }
 
     p {
-        font-size     : 1.2rem;
+        font-size: 1.2rem;
         letter-spacing: 0.1rem;
-        text-align    : center;
-        margin-bottom : 3%;
+        text-align: center;
+        margin-bottom: 3%;
     }
 
     a {
         @extend .btn-basic;
         border: 1px solid $purple;
-        width : 20%;
+        width: 20%;
 
         &:hover {
             background-color: $purple;
-            color           : $white;
-            transition      : 0.8s;
+            color: $white;
+            transition: 0.8s;
+        }
+    }
+
+    @media screen and #{$mq-mobile} {
+        height: 80vh;
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 5% 0;
+        }
+
+        a {
+            padding: 2% 0;
+            width: 50%;
         }
     }
 }

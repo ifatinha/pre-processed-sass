@@ -1,14 +1,11 @@
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 //Import arquivos auxiliares
-@import "./variables/colors";
+@import "./variables/variaveis";
 @import "./functions/mixins";
-
 //Import seções
 @import "./laytout/global";
 @import "./laytout/header";
-
 @import "./laytout/main-principal";
 @import "./laytout/secao-sobre";
 @import "./laytout/secao-planos";
